@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dompetku</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Dompetku</h1>
+    <div class="form-card">
+      <h3 id="form-title">Tambah Pengeluaran</h3> <input type="text" id="item" placeholder="Nama Pengeluaran" />
+      <div class="row">
+        <input type="number" id="qty" placeholder="Qty" />
+        <input type="number" id="price" placeholder="Harga" />
+      </div>
+      <div class="row">
+        <input type="date" id="date" />
+        <select id="method">
+          <option value="Cash">Cash</option>
+          <option value="Cashless">Cashless</option>
+        </select>
+      </div>
+      <select id="category">
+        <option>Makanan</option>
+        <option>Minuman</option>
+        <option>Transport</option>
+        <option>Belanja</option>
+        <option>Hiburan</option>
+        <option>Kesehatan</option>
+      </select>
+      <button id="saveBtn" onclick="saveData()">Tambah</button>
+      <button id="cancelBtn" onclick="cancelEdit()" style="display:none; background:#555; margin-top:5px;">Batal</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Qty</th>
+          <th>Harga</th>
+          <th>Total</th>
+          <th>Tanggal</th>
+          <th>Metode</th>
+          <th>Kategori</th>
+          <th style="text-align:center">Aksi</th> </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
+
+    <div class="total-box" id="summary">Total Pengeluaran: Rp 0</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
